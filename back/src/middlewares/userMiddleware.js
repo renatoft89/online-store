@@ -9,7 +9,7 @@ const userSchema = Joi.object({
 
 
 const userValidate = (req, res, next) => {
-  const user = req.body
+  const user = req.body;  
   const { error } = userSchema.validate(user);
 
   if (error) {

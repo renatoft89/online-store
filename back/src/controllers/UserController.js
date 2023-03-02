@@ -1,4 +1,4 @@
-const { userService } = require("../services/UserServices")
+const { userService, indexService } = require("../services/UserServices")
 
 const userController = async (req, res, next) => {
   try {
@@ -6,11 +6,25 @@ const userController = async (req, res, next) => {
 
     const user = await userService(name, email, password, role)
 
-    return res.json(user)
+    return res.status(200).json(user)
 
   } catch (error) {
     next(error)
   }
 }
 
-module.exports = { userController }
+const indexController = async (req, res, next) => {
+  try {
+    const allUser = await indexService();
+  
+    return res.status(200).json({ allUser })
+    
+  } catch (error) {
+    next(error)
+  }
+
+
+
+}
+
+module.exports = { userController, indexController }

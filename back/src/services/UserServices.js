@@ -18,4 +18,10 @@ const userService = async (name, email, password, role) => {
 
 }
 
-module.exports = { userService }
+const indexService = async () => {
+  const result = await prisma.user.findMany();
+
+  return result
+}
+
+module.exports = { userService, indexService }

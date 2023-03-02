@@ -9,7 +9,7 @@ const userController = async (req, res, next) => {
     return res.json(user)
 
   } catch (error) {
-    console.log(error);
+    next(error)
   }
 }
 

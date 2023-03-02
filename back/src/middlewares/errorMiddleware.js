@@ -4,7 +4,7 @@ const handlePrismaErrors = (error, _req, res, next) => {
   } else if (error.code === "P2025") {
     res.status(404).json({ message: "Record not found error" });
   } else {
-    console.log({ erro: 'errouuuuuuuuuuuuuu' });
+    console.log({ error });
     res.status(500).json({ message: "Internal server error" });
   }
 }

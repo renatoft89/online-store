@@ -13,7 +13,7 @@ const userValidate = (req, res, next) => {
   const { error } = userSchema.validate(user);
 
   if (error) {
-    res.status(422).json({ error: error.details[0].message })
+    res.status(422).json({ message: error.details[0].message })
   } else {
     next()
   }

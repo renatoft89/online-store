@@ -22,19 +22,20 @@ const Login = () => {
 
   const handleLogin = async (event) => {
     event.preventDefault();
-    const data = { email, password }
+    const dataLogin = { email, password }
     try {
-      const { user } = await apiLoginUser('/user/auth', data);
-      if (user.erro) {
-        setErr(user.erro)
-        console.log(user.erro);
-      } else {
-        setUserLocalStorage({ email: user.email, token: user.token })
-        navigate("/home");
-      }
+      const { data } = await apiLoginUser('/user/auth', dataLogin);
+  
+      setUserLocalStorage({ email: data.user.email, token: data.user.token })
+      navigate("/home");
+
     } catch (error) {
-      console.log(error);
-      setErr(error)
+      if (error.code === 'ERR_NETWORK') {
+        setErr(error.message)
+
+      } else {
+        setErr(error.response.data.message)
+      }
     }
   };
 

@@ -10,6 +10,6 @@ export const apiRegisterUser = async (endpoint, body) => {
 }
 
 export const apiLoginUser = async (endpoint, body) => {
-  const { data } = await api.post(endpoint, body);
+  const data = await api.post(endpoint, body);
   return data;
 }

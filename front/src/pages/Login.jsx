@@ -31,9 +31,11 @@ const Login = () => {
 
     } catch (error) {
       if (error.code === 'ERR_NETWORK') {
+        console.log(error);
         setErr(error.message)
 
       } else {
+        console.log(error);
         setErr(error.response.data.message)
       }
     }

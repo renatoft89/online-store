@@ -3,10 +3,14 @@ import StoreContext from "./StoreContext";
 
 
 
-const StoreProvider = ({ children }) => {
-  const [categories, setCategories] = useState([]);
+const StoreProvider = ({ children }) => {  
+  const [checkedCategory, setCheckedCategory] = useState('');
 
-  const data = { categories, setCategories }
+  const data = {
+    checkedCategory,
+    setCheckedCategory,
+  }
+
   return (
     <StoreContext.Provider value={ data }>
       { children }

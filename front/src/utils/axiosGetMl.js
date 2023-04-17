@@ -8,3 +8,8 @@ export const apiGetCategories = async (endpoint) => {
   const { data } = await api.get(endpoint);
   return data;
 }
+
+export const apiGetproducts = async (endpoint) => {
+  const { data } = await api.get(endpoint);
+  return data;
+}

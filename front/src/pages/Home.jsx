@@ -1,12 +1,17 @@
 import React from 'react';
 import Categories from '../components/Categories';
+import ListProducts from '../components/ListProducts';
+import Header from '../components/Header';
 
 
 const Home = () => {
   return (
-    <section className="categories">
-      <Categories />
-    </section>
+    <>
+      <Header />
+      <ListProducts />
+      <section className="categories">
+        <Categories />
+      </section></>
   );
 };
 

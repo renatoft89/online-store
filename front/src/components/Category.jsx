@@ -1,9 +1,9 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { apiGetCategories } from '../utils/axiosGetMl';
 import StoreContext from '../context/StoreContext';
+import '../styles/Category.css'
 
-
-const Categories = () => {
+const Category = () => {
   const [categories, setCategories] = useState([]);
   const { checkedCategory, setCheckedCategory } = useContext(StoreContext);
 
@@ -48,4 +48,4 @@ const Categories = () => {
   )
 };
 
-export default Categories;
+export default Category;

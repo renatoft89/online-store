@@ -1,7 +1,7 @@
 import React from 'react';
-import Categories from '../components/Categories';
 import ListProducts from '../components/ListProducts';
 import Header from '../components/Header';
+import Category from '../components/Category';
 
 
 const Home = () => {
@@ -10,7 +10,7 @@ const Home = () => {
       <Header />
       <ListProducts />
       <section className="categories">
-        <Categories />
+        <Category />
       </section></>
   );
 };

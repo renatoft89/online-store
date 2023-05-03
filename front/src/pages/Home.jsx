@@ -8,10 +8,11 @@ const Home = () => {
   return (
     <>
       <Header />
-      <ListProducts />
-      <section className="categories">
+      <main className="main-home">
         <Category />
-      </section></>
+        <ListProducts />
+      </main>
+    </>
   );
 };
 

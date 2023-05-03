@@ -1,6 +1,7 @@
 import React,{ useContext } from 'react';
 import StoreContext from '../context/StoreContext';
 import { formatReal } from '../utils/formatReal';
+import '../styles/ListProducts.css'
 
 
 const ListProducts = () => {

@@ -27,23 +27,25 @@ const Category = () => {
 
   return (
     <>
-      {
-        categories.map(category => (
-          <ul key={category.id} className="category">
-            <li>
-              <input
-                type="checkbox"
-                id={category.id}
-                name={category.name}
-                value={category.id}
-                checked={checkedCategory === category.id}
-                onChange={() => handleCategory(category.id)}
-              />
-              {category.name}
-            </li>
-          </ul>
-        ))
-      }
+      <section className="categories">
+        {
+          categories.map(category => (
+            <ul key={category.id} className="category">
+              <li>
+                <input
+                  type="checkbox"
+                  id={category.id}
+                  name={category.name}
+                  value={category.id}
+                  checked={checkedCategory === category.id}
+                  onChange={() => handleCategory(category.id)}
+                />
+                {category.name}
+              </li>
+            </ul>
+          ))
+        }
+      </section>
     </>
   )
 };

@@ -33,7 +33,7 @@ const Registration = () => {
       }
       await apiRegisterUser('/user/new', dataUser);
       setErr(false)
-      navigate('/login')
+      navigate('/')
 
     } catch (error) {
       console.log(error);
